@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-code": "mkdir -p src/gen && . $HOME/.sdkman/bin/sdkman-init.sh && sdk env install && sdk env && npx openapi-generator-cli generate -g typescript-node --additional-properties=typescriptThreePlus=true --global-property=skipFormModel=false -o src/gen -i openapi.json"
   },
   "author": "",
   "license": "ISC",
